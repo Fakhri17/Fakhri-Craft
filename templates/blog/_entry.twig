@@ -1,0 +1,22 @@
+ {% extends "_layouts/base.twig" %}
+
+ {% set hello = 'Fakhri' %}
+{% block content %}
+<div class="flex  flex-wrap sm:mt-10">
+  <div class="w-full sm:w-3/4  sm:px-8 ">
+    <h1 class="text-center uppercase  text-4xl font-bold"> {{entry.title}} </h1>
+<p class="text-center">Dipost tanggal {{entry.postDate|date("d F Y g:i A")}} </p>
+<div class="sm:max-w-2xl mx-auto pt-5" >
+    <img src="{{siteUrl}}{{entry.image.one().url}}" alt="">
+</div>
+<div class="sm:container sm:mx-auto  overflow-hidden p-5">
+  <div class="jaraktext">  
+    {{entry.contentText}}
+  </div>
+</div>
+{% if entry.type == 'kategori' %}
+  {% include "blog/_entry_kategori_list.twig" %}
+{% endif %}
+  </div>
+</div>
+{% endblock  %}

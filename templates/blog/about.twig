@@ -1,0 +1,18 @@
+{% extends "_layouts/base.twig" %}
+{% block content %}
+<div class="sm:container  px-5 ">
+  <div class="sm:flex justify-center sm:flex-wrap mt-10">
+    <div class="sm:w-1/3 p-2">
+      <div class="  p-5">
+        <img class="w-56 h-56 rounded-full mx-auto "src="{{siteUrl}}{{entry.image.one().url}}" alt="">   
+      </div>
+    </div>
+  </div>
+  <section class="container mt-5 mx-auto">
+    <h1 class="text-center uppercase  text-4xl font-bold  ">About</h1>
+    <div class="text-center  font-serif   p-5  text-xl">
+      {{entry.contentText}}
+    </div>
+  </section>
+</div>
+{% endblock  %}

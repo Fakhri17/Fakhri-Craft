@@ -1,0 +1,19 @@
+<div class="w-full sm:w-1/4  sm:pt-1  ">
+  <h1 class="text-center uppercase  text-4xl font-bold">Post Terbaru</h1>
+  <div class="bg-gray-700 h-1 sm:mt-4 sm:mx-5"></div>
+  <ul class="list-inside p-5">
+    {% set post =  craft.entries.section('post').type('post').limit(3) %}
+    {% for item in post %}
+      <li class="pb-2"><a class="hover:text-blue-600 hover:underline"href="{{item.url}}">{{item.title}} 
+      </a><p class="text-sm text-gray-600">( {{item.postDate|date("d F Y g:i A")}} )</p></li>
+    {% endfor %}
+  </ul>
+  <h1 class="text-center uppercase  text-4xl font-bold">Kategori</h1>
+  <div class="bg-gray-700 h-1 sm:mt-4 sm:mx-5"></div>
+  <ul class="list-inside p-5">
+    {% for item in craft.categories.all() %}
+      <li class="pb-2"><a class="hover:text-blue-600 hover:underline"href="{{item.url}}">{{item.title}}</a>
+    {% endfor %}
+  </ul>
+</div>
+<!-- <a href="#" id="scroll" style="display: none;"><span></span></a> -->

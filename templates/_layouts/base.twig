@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html>
+  <head>
+      <meta charset="UTF-8">
+      <meta name="description" content="Free Web tutorials">
+      <meta name="keywords" content="HTML,CSS,XML,JavaScript">
+      <meta name="author" content="John Doe">
+      <meta name="viewport" content="width=device-width, initial-scale=1.0">
+      <link rel="stylesheet" href="{{siteUrl}}assets\css\style.css">
+      <link href="https://unpkg.com/tailwindcss@^1.0/dist/tailwind.min.css" rel="stylesheet">
+      <link href="https://fonts.googleapis.com/css?family=Bowlby+One+SC" rel="stylesheet">
+      <link href="https://unpkg.com/aos@2.3.1/dist/aos.css" rel="stylesheet">
+      <title> FakhTech </title>
+  </head>
+  <body>
+    {# Navbar #}
+    {% include "_include/header.twig" %}
+    {# end #}
+    <p>{%  set salam = hello  |default('default value')%}
+      {{salam}}    </p>
+    {% block content %}
+        {# content #}
+    {% endblock %}
+    {% include "_include/footer.twig" %}
+   <script src="{{siteUrl}}assets\js\script.js"></script>
+   <script src="https://unpkg.com/aos@2.3.1/dist/aos.js"></script>
+   <script src="https://cdnjs.cloudflare.com/ajax/libs/typed.js/2.0.8/typed.min.js"></script>
+   <script>
+    AOS.init();
+  </script>
+  <script>
+    new Typed('#typed',{
+      strings : ['Coding','Front End','Web Dev'],
+       typeSpeed : 70,
+      delaySpeed : 100,
+      loop : true
+    });
+  </script>
+</body>
+</html>

@@ -1,0 +1,237 @@
+categoryGroups:
+  70d87268-d75d-4e59-9dba-5deeeb3932ff:
+    name: kategori
+    handle: kategori
+    structure:
+      uid: a4746656-f4f8-48d8-9b7b-87167c835358
+      maxLevels: null
+    siteSettings:
+      3ed3ee5e-f529-45d7-9195-f75d4537b77b:
+        hasUrls: true
+        uriFormat: 'kategori/{slug}'
+        template: blog/_entry_kategori_list
+dateModified: 1575533118
+email:
+  fromEmail: fakhricoffe@gmail.com
+  fromName: Fakhri-Craft
+  transportType: craft\mail\transportadapters\Sendmail
+fieldGroups:
+  59039bfc-5fa4-4947-94d2-e0a505401af7:
+    name: Common
+fields:
+  042ca71a-1a0d-4d86-baca-817844f4f7e0:
+    name: hastag
+    handle: hastag
+    instructions: ''
+    searchable: false
+    translationMethod: site
+    translationKeyFormat: null
+    type: craft\fields\Tags
+    settings:
+      allowMultipleSources: false
+      allowLimit: false
+      sources: '*'
+      source: 'taggroup:45a9842d-1482-4d4a-afd8-abb924feb16e'
+      targetSiteId: null
+      viewMode: null
+      limit: null
+      selectionLabel: ''
+      localizeRelations: false
+      validateRelatedElements: ''
+    contentColumnType: string
+    fieldGroup: 59039bfc-5fa4-4947-94d2-e0a505401af7
+  536429ec-e223-4f68-9237-3bedc20ae006:
+    name: 'Content Text'
+    handle: contentText
+    instructions: ''
+    searchable: false
+    translationMethod: none
+    translationKeyFormat: null
+    type: craft\redactor\Field
+    settings:
+      redactorConfig: Standard.json
+      purifierConfig: ''
+      cleanupHtml: true
+      removeInlineStyles: '1'
+      removeEmptyTags: ''
+      removeNbsp: ''
+      purifyHtml: '1'
+      columnType: text
+      availableVolumes: '*'
+      availableTransforms: '*'
+    contentColumnType: text
+    fieldGroup: 59039bfc-5fa4-4947-94d2-e0a505401af7
+  6ffd05b5-57f2-4ae8-8c71-33e7df74f865:
+    name: kategori
+    handle: kategori
+    instructions: ''
+    searchable: true
+    translationMethod: site
+    translationKeyFormat: null
+    type: craft\fields\Categories
+    settings:
+      allowLimit: false
+      allowMultipleSources: false
+      branchLimit: ''
+      sources: '*'
+      source: 'group:70d87268-d75d-4e59-9dba-5deeeb3932ff'
+      targetSiteId: null
+      viewMode: null
+      limit: null
+      selectionLabel: ''
+      localizeRelations: false
+      validateRelatedElements: ''
+    contentColumnType: string
+    fieldGroup: 59039bfc-5fa4-4947-94d2-e0a505401af7
+  d3c41393-bd88-435a-b5c1-bbca872c510d:
+    name: Image
+    handle: image
+    instructions: ''
+    searchable: false
+    translationMethod: site
+    translationKeyFormat: null
+    type: craft\fields\Assets
+    settings:
+      useSingleFolder: ''
+      defaultUploadLocationSource: 'volume:129ea671-9029-49fa-8685-b84c0b05f425'
+      defaultUploadLocationSubpath: '{slug}'
+      singleUploadLocationSource: 'volume:129ea671-9029-49fa-8685-b84c0b05f425'
+      singleUploadLocationSubpath: ''
+      restrictFiles: ''
+      allowedKinds: null
+      sources: '*'
+      source: null
+      targetSiteId: null
+      viewMode: large
+      limit: ''
+      selectionLabel: ''
+      localizeRelations: false
+      validateRelatedElements: ''
+    contentColumnType: string
+    fieldGroup: 59039bfc-5fa4-4947-94d2-e0a505401af7
+plugins:
+  redactor-split:
+    edition: standard
+    enabled: true
+    schemaVersion: 1.0.0
+  redactor:
+    edition: standard
+    enabled: true
+    schemaVersion: 2.3.0
+  froala-editor:
+    edition: standard
+    enabled: true
+    schemaVersion: 1.0.0
+  super-table:
+    edition: standard
+    enabled: true
+    schemaVersion: 2.2.1
+sections:
+  7544784e-94b5-49bd-a8e8-5d36a1ac403d:
+    name: About
+    handle: About
+    type: channel
+    enableVersioning: true
+    propagationMethod: all
+    siteSettings:
+      3ed3ee5e-f529-45d7-9195-f75d4537b77b:
+        enabledByDefault: true
+        hasUrls: true
+        uriFormat: '{slug}'
+        template: blog/about
+    entryTypes:
+      26ec0db9-1a15-4618-8a4b-a3d73d5c9247:
+        name: About
+        handle: about
+        hasTitleField: true
+        titleLabel: Title
+        titleFormat: ''
+        sortOrder: 2
+        fieldLayouts:
+          1a1653d7-b891-4d5d-b00b-9f803235767c:
+            tabs:
+              -
+                name: 'Tab 1'
+                sortOrder: 1
+                fields:
+                  536429ec-e223-4f68-9237-3bedc20ae006:
+                    required: false
+                    sortOrder: 2
+                  d3c41393-bd88-435a-b5c1-bbca872c510d:
+                    required: false
+                    sortOrder: 1
+  89ebd83e-c327-44e3-b0e1-b7e86169c749:
+    name: Post
+    handle: post
+    type: channel
+    enableVersioning: true
+    propagationMethod: all
+    siteSettings:
+      3ed3ee5e-f529-45d7-9195-f75d4537b77b:
+        enabledByDefault: true
+        hasUrls: true
+        uriFormat: 'post/{slug}'
+        template: blog/_entry
+    entryTypes:
+      43656fca-8bf8-427c-b135-8e6f038f4801:
+        name: Post
+        handle: post
+        hasTitleField: true
+        titleLabel: Title
+        titleFormat: ''
+        sortOrder: 1
+        fieldLayouts:
+          af3e1dac-d327-4e1e-84ae-cb4f966006ab:
+            tabs:
+              -
+                name: Post
+                sortOrder: 1
+                fields:
+                  536429ec-e223-4f68-9237-3bedc20ae006:
+                    required: true
+                    sortOrder: 3
+                  6ffd05b5-57f2-4ae8-8c71-33e7df74f865:
+                    required: false
+                    sortOrder: 2
+                  d3c41393-bd88-435a-b5c1-bbca872c510d:
+                    required: true
+                    sortOrder: 1
+siteGroups:
+  e7955ab5-df32-4b5a-a4b1-deebcad3352c:
+    name: Fakhri-Craft
+sites:
+  3ed3ee5e-f529-45d7-9195-f75d4537b77b:
+    baseUrl: $DEFAULT_SITE_URL
+    handle: default
+    hasUrls: true
+    language: en-US
+    name: Fakhri-Craft
+    primary: true
+    siteGroup: e7955ab5-df32-4b5a-a4b1-deebcad3352c
+    sortOrder: 1
+system:
+  edition: solo
+  name: Fakhri-Craft
+  live: true
+  schemaVersion: 3.3.3
+  timeZone: America/Los_Angeles
+tagGroups:
+  45a9842d-1482-4d4a-afd8-abb924feb16e:
+    name: tag
+    handle: tag
+users:
+  requireEmailVerification: true
+  allowPublicRegistration: false
+  defaultGroup: null
+  photoVolumeUid: null
+  photoSubpath: ''
+volumes:
+  129ea671-9029-49fa-8685-b84c0b05f425:
+    name: image
+    handle: image
+    type: craft\volumes\Local
+    hasUrls: true
+    url: /uploads/assets/cover/image
+    settings:
+      path: uploads/assets/cover/image
+    sortOrder: 1
