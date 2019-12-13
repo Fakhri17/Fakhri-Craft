@@ -1,14 +1,15 @@
+var btn = $('#button');
 
-// $(document).ready(function(){ 
-//     $(window).scroll(function(){ 
-//         if ($(this).scrollTop() > 100) { 
-//             $('#scroll').fadeIn(); 
-//         } else { 
-//             $('#scroll').fadeOut(); 
-//         } 
-//     }); 
-//     $('#scroll').click(function(){ 
-//         $("html, body").animate({ scrollTop: 0 }, 600); 
-//         return false; 
-//     }); 
-// });
+$(window).scroll(function() {
+  if ($(window).scrollTop() > 200) {
+    btn.addClass('show');
+  } else {
+    btn.removeClass('show');
+  }
+});
+
+btn.on('click', function(e) {
+  e.preventDefault();
+  $('html, body').animate({scrollTop:0}, '200');
+});
+
