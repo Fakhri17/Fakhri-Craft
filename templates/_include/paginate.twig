@@ -1,0 +1,23 @@
+<div class="container mx-auto p-6">
+  <div class="flex sm:justify-center">
+    {% if pageInfo.prevUrl %}
+      <a href="{{ pageInfo.prevUrl }}" class="border rounded-lg rounded-l bg-transparent hover:bg-blue-500 text-blue-700 hover:text-white p-3">prev</a>
+    {% endif %}
+
+    {% for page, url in pageInfo.getPrevUrls(2) %}
+    <a href="{{url}}" class="p-3 border border-l-0 bg-transparent hover:bg-blue-500 text-blue-700 hover:text-white">{{page}}</a>
+    {% endfor %}
+
+    {% if pageInfo.totalPages >= 2 %}<span class="p-3 border border-l-0 bg-transparent hover:bg-blue-500 text-blue-700 hover:text-white">
+      {{ pageInfo.currentPage }}</span>
+    {% endif %}
+
+    {% for page, url in pageInfo.getNextUrls(2) %}
+    <a href="{{url}}" class="p-3 border border-l-0 bg-transparent hover:bg-blue-500 text-blue-700 hover:text-white">{{page}}</a>
+    {% endfor %}
+
+    {% if pageInfo.nextUrl %}
+    <a href="{{ pageInfo.nextUrl }}" class="p-3 rounded-lg rounded-r border border-l-0 bg-transparent hover:bg-blue-500 text-blue-700 hover:text-white p-3">next</a>
+    {% endif %}
+  </div>
+</div>

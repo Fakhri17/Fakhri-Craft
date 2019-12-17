@@ -10,7 +10,7 @@ categoryGroups:
         hasUrls: true
         uriFormat: 'kategori/{slug}'
         template: blog/_entry_kategori_list
-dateModified: 1575533118
+dateModified: 1576546649
 email:
   fromEmail: fakhricoffe@gmail.com
   fromName: Fakhri-Craft
@@ -131,14 +131,14 @@ sections:
     name: About
     handle: About
     type: channel
-    enableVersioning: true
+    enableVersioning: false
     propagationMethod: all
     siteSettings:
       3ed3ee5e-f529-45d7-9195-f75d4537b77b:
         enabledByDefault: true
         hasUrls: true
         uriFormat: '{slug}'
-        template: blog/about
+        template: /about
     entryTypes:
       26ec0db9-1a15-4618-8a4b-a3d73d5c9247:
         name: About

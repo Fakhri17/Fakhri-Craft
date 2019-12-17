@@ -1,58 +1,22 @@
 {% extends "_layouts/base.twig" %}
 {% block content %}
-  <div class="flex sm:flex-row flex-wrap sm:mt-10 ">
-    <div class="w-full sm:w-3/4  sm:px-8 text-center"> 
-      <div class=" uppercase  text-4xl font-bold" >
-        <h1> FakhTech Membahas Seputar <span id="typed"></span></h1> 
-      </div>
-    {% set entry =  craft.entries.section('post').type('post').limit(4) %}
+<div class="flex sm:flex-row flex-wrap sm:mt-10 ">
+  <div class="w-full sm:w-3/4  sm:px-8 text-center"> 
+    <div class=" uppercase  text-4xl font-bold" >
+      <h1> Selamat  Datang Di Fakhri BlogTech </h1> 
+    </div>
+  {% set entry =  craft.entries()
+    .section('post')
+    .type('post')
+    .limit(4) %}
     <div class="sm:flex content-start sm:flex-wrap mt-5 mb-10 mx-10">     
       {% paginate entry as pageInfo, pageEntries %}
       {% for item in pageEntries %}
-      <div class="sm:w-1/3  sm:max-w-lg sm:rounded sm:overflow-hidden shadow-lg m-8 border border-black" 
-      data-aos="zoom-in" data-aos-delay="100">
-          <div class="text-gray-700  p-4 " >
-            <div class="w-full mx-auto">
-              <a href="{{item.url}}">
-              <img class="h-40 mx-auto"src="{{siteUrl}}{{item.image.one().url}}" alt="">
-              </a>
-            </div>
-            <div class="px-4 py-4">
-              <a href="{{item.url}}">    
-                <div class="font-bold text-xl mb-2"> {{item.title}}</div>
-              </a>
-              <div class=" border border-blue-500 hover:bg-blue-500 sm:w-24  mx-auto m-5 px-1">
-                <p class="">{{item.kategori.one()}}</p>
-              </div>
-            </div>
-          </div>
-       </div>
-       {% endfor %}
+        {% include "_include/blog_list.twig" %}
+      {% endfor %}
     </div>
-    <div class="container mx-auto p-6">
-        <div class="flex sm:justify-center">
-          {% if pageInfo.prevUrl %}
-            <a href="{{ pageInfo.prevUrl }}" class="border rounded-lg rounded-l bg-transparent hover:bg-blue-500 text-blue-700 hover:text-white p-3">prev</a>
-          {% endif %}
-    
-          {% for page, url in pageInfo.getPrevUrls(2) %}
-          <a href="{{url}}" class="p-3 border border-l-0 bg-transparent hover:bg-blue-500 text-blue-700 hover:text-white">{{page}}</a>
-          {% endfor %}
-    
-          {% if pageInfo.totalPages >= 2 %}<span class="p-3 border border-l-0 bg-transparent hover:bg-blue-500 text-blue-700 hover:text-white">
-            {{ pageInfo.currentPage }}</span>
-          {% endif %}
-    
-          {% for page, url in pageInfo.getNextUrls(2) %}
-          <a href="{{url}}" class="p-3 border border-l-0 bg-transparent hover:bg-blue-500 text-blue-700 hover:text-white">{{page}}</a>
-          {% endfor %}
-    
-          {% if pageInfo.nextUrl %}
-          <a href="{{ pageInfo.nextUrl }}" class="p-3 rounded-lg rounded-r border border-l-0 bg-transparent hover:bg-blue-500 text-blue-700 hover:text-white p-3">next</a>
-          {% endif %}
-        </div>
-      </div>
-    </div>
-    {% include "_include/sidebar.twig" %}
+    {% include "_include/paginate.twig" %}
   </div>
+  {% include "_include/sidebar.twig" %}
+</div>
 {% endblock  %}
