@@ -10,7 +10,7 @@ categoryGroups:
         hasUrls: true
         uriFormat: 'kategori/{slug}'
         template: blog/_entry_kategori_list
-dateModified: 1576546649
+dateModified: 1576561759
 email:
   fromEmail: fakhricoffe@gmail.com
   fromName: Fakhri-Craft
@@ -126,6 +126,23 @@ plugins:
     edition: standard
     enabled: true
     schemaVersion: 2.2.1
+  patrol:
+    edition: standard
+    enabled: true
+    schemaVersion: 3.0.0
+    settings:
+      primaryDomain: ''
+      redirectStatusCode: 302
+      sslRoutingEnabled: ''
+      sslRoutingBaseUrl: ''
+      sslRoutingRestrictedUrls:
+        - /
+      maintenanceModeEnabled: ''
+      maintenanceModePageUrl: /offline
+      maintenanceModeResponseStatusCode: 403
+      maintenanceModeAuthorizedIps:
+        - '::1'
+        - 127.0.0.1
 sections:
   7544784e-94b5-49bd-a8e8-5d36a1ac403d:
     name: About
