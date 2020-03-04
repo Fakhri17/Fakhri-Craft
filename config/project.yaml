@@ -1,16 +1,16 @@
 categoryGroups:
   70d87268-d75d-4e59-9dba-5deeeb3932ff:
-    name: kategori
     handle: kategori
-    structure:
-      uid: a4746656-f4f8-48d8-9b7b-87167c835358
-      maxLevels: null
+    name: kategori
     siteSettings:
       3ed3ee5e-f529-45d7-9195-f75d4537b77b:
         hasUrls: true
-        uriFormat: 'kategori/{slug}'
         template: blog/_entry_kategori_list
-dateModified: 1576561759
+        uriFormat: 'kategori/{slug}'
+    structure:
+      maxLevels: null
+      uid: a4746656-f4f8-48d8-9b7b-87167c835358
+dateModified: 1583293807
 email:
   fromEmail: fakhricoffe@gmail.com
   fromName: Fakhri-Craft
@@ -20,105 +20,105 @@ fieldGroups:
     name: Common
 fields:
   042ca71a-1a0d-4d86-baca-817844f4f7e0:
-    name: hastag
-    handle: hastag
-    instructions: ''
-    searchable: false
-    translationMethod: site
-    translationKeyFormat: null
-    type: craft\fields\Tags
-    settings:
-      allowMultipleSources: false
-      allowLimit: false
-      sources: '*'
-      source: 'taggroup:45a9842d-1482-4d4a-afd8-abb924feb16e'
-      targetSiteId: null
-      viewMode: null
-      limit: null
-      selectionLabel: ''
-      localizeRelations: false
-      validateRelatedElements: ''
     contentColumnType: string
     fieldGroup: 59039bfc-5fa4-4947-94d2-e0a505401af7
-  536429ec-e223-4f68-9237-3bedc20ae006:
-    name: 'Content Text'
-    handle: contentText
+    handle: hastag
     instructions: ''
+    name: hastag
     searchable: false
-    translationMethod: none
-    translationKeyFormat: null
-    type: craft\redactor\Field
     settings:
-      redactorConfig: Standard.json
-      purifierConfig: ''
-      cleanupHtml: true
-      removeInlineStyles: '1'
-      removeEmptyTags: ''
-      removeNbsp: ''
-      purifyHtml: '1'
-      columnType: text
-      availableVolumes: '*'
-      availableTransforms: '*'
+      allowLimit: false
+      allowMultipleSources: false
+      limit: null
+      localizeRelations: false
+      selectionLabel: ''
+      source: 'taggroup:45a9842d-1482-4d4a-afd8-abb924feb16e'
+      sources: '*'
+      targetSiteId: null
+      validateRelatedElements: ''
+      viewMode: null
+    translationKeyFormat: null
+    translationMethod: site
+    type: craft\fields\Tags
+  536429ec-e223-4f68-9237-3bedc20ae006:
     contentColumnType: text
     fieldGroup: 59039bfc-5fa4-4947-94d2-e0a505401af7
+    handle: contentText
+    instructions: ''
+    name: 'Content Text'
+    searchable: false
+    settings:
+      availableTransforms: '*'
+      availableVolumes: '*'
+      cleanupHtml: true
+      columnType: text
+      purifierConfig: ''
+      purifyHtml: '1'
+      redactorConfig: Standard.json
+      removeEmptyTags: ''
+      removeInlineStyles: '1'
+      removeNbsp: ''
+    translationKeyFormat: null
+    translationMethod: none
+    type: craft\redactor\Field
   6ffd05b5-57f2-4ae8-8c71-33e7df74f865:
-    name: kategori
+    contentColumnType: string
+    fieldGroup: 59039bfc-5fa4-4947-94d2-e0a505401af7
     handle: kategori
     instructions: ''
+    name: kategori
     searchable: true
-    translationMethod: site
-    translationKeyFormat: null
-    type: craft\fields\Categories
     settings:
       allowLimit: false
       allowMultipleSources: false
       branchLimit: ''
-      sources: '*'
-      source: 'group:70d87268-d75d-4e59-9dba-5deeeb3932ff'
-      targetSiteId: null
-      viewMode: null
       limit: null
-      selectionLabel: ''
       localizeRelations: false
+      selectionLabel: ''
+      source: 'group:70d87268-d75d-4e59-9dba-5deeeb3932ff'
+      sources: '*'
+      targetSiteId: null
       validateRelatedElements: ''
+      viewMode: null
+    translationKeyFormat: null
+    translationMethod: site
+    type: craft\fields\Categories
+  d3c41393-bd88-435a-b5c1-bbca872c510d:
     contentColumnType: string
     fieldGroup: 59039bfc-5fa4-4947-94d2-e0a505401af7
-  d3c41393-bd88-435a-b5c1-bbca872c510d:
-    name: Image
     handle: image
     instructions: ''
+    name: Image
     searchable: false
-    translationMethod: site
-    translationKeyFormat: null
-    type: craft\fields\Assets
     settings:
-      useSingleFolder: ''
+      allowedKinds: null
       defaultUploadLocationSource: 'volume:129ea671-9029-49fa-8685-b84c0b05f425'
       defaultUploadLocationSubpath: '{slug}'
+      limit: ''
+      localizeRelations: false
+      restrictFiles: ''
+      selectionLabel: ''
       singleUploadLocationSource: 'volume:129ea671-9029-49fa-8685-b84c0b05f425'
       singleUploadLocationSubpath: ''
-      restrictFiles: ''
-      allowedKinds: null
-      sources: '*'
       source: null
+      sources: '*'
       targetSiteId: null
-      viewMode: large
-      limit: ''
-      selectionLabel: ''
-      localizeRelations: false
+      useSingleFolder: ''
       validateRelatedElements: ''
-    contentColumnType: string
-    fieldGroup: 59039bfc-5fa4-4947-94d2-e0a505401af7
+      viewMode: large
+    translationKeyFormat: null
+    translationMethod: site
+    type: craft\fields\Assets
 plugins:
-  redactor-split:
+  patrol:
     edition: standard
     enabled: true
-    schemaVersion: 1.0.0
+    schemaVersion: 3.0.0
   redactor:
     edition: standard
     enabled: true
     schemaVersion: 2.3.0
-  froala-editor:
+  redactor-split:
     edition: standard
     enabled: true
     schemaVersion: 1.0.0
@@ -126,50 +126,15 @@ plugins:
     edition: standard
     enabled: true
     schemaVersion: 2.2.1
-  patrol:
-    edition: standard
-    enabled: true
-    schemaVersion: 3.0.0
-    settings:
-      primaryDomain: ''
-      redirectStatusCode: 302
-      sslRoutingEnabled: ''
-      sslRoutingBaseUrl: ''
-      sslRoutingRestrictedUrls:
-        - /
-      maintenanceModeEnabled: ''
-      maintenanceModePageUrl: /offline
-      maintenanceModeResponseStatusCode: 403
-      maintenanceModeAuthorizedIps:
-        - '::1'
-        - 127.0.0.1
 sections:
   7544784e-94b5-49bd-a8e8-5d36a1ac403d:
-    name: About
-    handle: About
-    type: channel
     enableVersioning: false
-    propagationMethod: all
-    siteSettings:
-      3ed3ee5e-f529-45d7-9195-f75d4537b77b:
-        enabledByDefault: true
-        hasUrls: true
-        uriFormat: '{slug}'
-        template: /about
     entryTypes:
       26ec0db9-1a15-4618-8a4b-a3d73d5c9247:
-        name: About
-        handle: about
-        hasTitleField: true
-        titleLabel: Title
-        titleFormat: ''
-        sortOrder: 2
         fieldLayouts:
           1a1653d7-b891-4d5d-b00b-9f803235767c:
             tabs:
               -
-                name: 'Tab 1'
-                sortOrder: 1
                 fields:
                   536429ec-e223-4f68-9237-3bedc20ae006:
                     required: false
@@ -177,32 +142,36 @@ sections:
                   d3c41393-bd88-435a-b5c1-bbca872c510d:
                     required: false
                     sortOrder: 1
-  89ebd83e-c327-44e3-b0e1-b7e86169c749:
-    name: Post
-    handle: post
-    type: channel
-    enableVersioning: true
+                name: 'Tab 1'
+                sortOrder: 1
+        handle: about
+        hasTitleField: true
+        name: About
+        sortOrder: 2
+        titleFormat: ''
+        titleLabel: Title
+    handle: About
+    name: About
+    previewTargets:
+      -
+        label: 'Primary entry page'
+        urlFormat: '{url}'
     propagationMethod: all
     siteSettings:
       3ed3ee5e-f529-45d7-9195-f75d4537b77b:
         enabledByDefault: true
         hasUrls: true
-        uriFormat: 'post/{slug}'
-        template: blog/_entry
+        template: /about
+        uriFormat: '{slug}'
+    type: channel
+  89ebd83e-c327-44e3-b0e1-b7e86169c749:
+    enableVersioning: true
     entryTypes:
       43656fca-8bf8-427c-b135-8e6f038f4801:
-        name: Post
-        handle: post
-        hasTitleField: true
-        titleLabel: Title
-        titleFormat: ''
-        sortOrder: 1
         fieldLayouts:
           af3e1dac-d327-4e1e-84ae-cb4f966006ab:
             tabs:
               -
-                name: Post
-                sortOrder: 1
                 fields:
                   536429ec-e223-4f68-9237-3bedc20ae006:
                     required: true
@@ -213,6 +182,28 @@ sections:
                   d3c41393-bd88-435a-b5c1-bbca872c510d:
                     required: true
                     sortOrder: 1
+                name: Post
+                sortOrder: 1
+        handle: post
+        hasTitleField: true
+        name: Post
+        sortOrder: 1
+        titleFormat: ''
+        titleLabel: Title
+    handle: post
+    name: Post
+    previewTargets:
+      -
+        label: 'Primary entry page'
+        urlFormat: '{url}'
+    propagationMethod: all
+    siteSettings:
+      3ed3ee5e-f529-45d7-9195-f75d4537b77b:
+        enabledByDefault: true
+        hasUrls: true
+        template: blog/_entry
+        uriFormat: 'post/{slug}'
+    type: channel
 siteGroups:
   e7955ab5-df32-4b5a-a4b1-deebcad3352c:
     name: Fakhri-Craft
@@ -228,27 +219,27 @@ sites:
     sortOrder: 1
 system:
   edition: solo
-  name: Fakhri-Craft
   live: true
-  schemaVersion: 3.3.3
+  name: Fakhri-Craft
+  schemaVersion: 3.4.10
   timeZone: America/Los_Angeles
 tagGroups:
   45a9842d-1482-4d4a-afd8-abb924feb16e:
-    name: tag
     handle: tag
+    name: tag
 users:
-  requireEmailVerification: true
   allowPublicRegistration: false
   defaultGroup: null
-  photoVolumeUid: null
   photoSubpath: ''
+  photoVolumeUid: null
+  requireEmailVerification: true
 volumes:
   129ea671-9029-49fa-8685-b84c0b05f425:
-    name: image
     handle: image
-    type: craft\volumes\Local
     hasUrls: true
-    url: /uploads/assets/cover/image
+    name: image
     settings:
       path: uploads/assets/cover/image
     sortOrder: 1
+    type: craft\volumes\Local
+    url: /uploads/assets/cover/image
