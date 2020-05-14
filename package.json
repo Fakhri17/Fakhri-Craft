@@ -1,0 +1,22 @@
+{
+  "name": "fakhri-craft",
+  "version": "1.0.0",
+  "description": "Fakhri BlogTech",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/Fakhri17/Fakhri-Craft.git"
+  },
+  "author": "Fakhri Alauddin",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/Fakhri17/Fakhri-Craft/issues"
+  },
+  "homepage": "https://github.com/Fakhri17/Fakhri-Craft#readme",
+  "devDependencies": {
+    "laravel-mix": "^5.0.4"
+  }
+}
