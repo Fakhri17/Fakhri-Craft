@@ -6,6 +6,7 @@
       .section('post')
       .type('post')
       .limit(3) 
+      .all()
     %}
     {% for item in post %}
       <li class="pb-2"><a class="hover:text-blue-600 hover:underline"href="{{item.url}}">{{item.title}} 
