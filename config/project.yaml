@@ -10,7 +10,7 @@ categoryGroups:
     structure:
       maxLevels: null
       uid: a4746656-f4f8-48d8-9b7b-87167c835358
-dateModified: 1583293807
+dateModified: 1593749193
 email:
   fromEmail: fakhricoffe@gmail.com
   fromName: Fakhri-Craft
@@ -110,6 +110,10 @@ fields:
     translationMethod: site
     type: craft\fields\Assets
 plugins:
+  fakhri-plugins:
+    edition: standard
+    enabled: true
+    schemaVersion: 1.0.0
   patrol:
     edition: standard
     enabled: true
