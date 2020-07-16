@@ -53,4 +53,7 @@ class FakhripluginsVariable
         }
         return $result;
     }
+    public function getCustomers() {
+        return Fakhriplugins::$plugin->fakhripluginsService->getCustomers();
+    }
 }

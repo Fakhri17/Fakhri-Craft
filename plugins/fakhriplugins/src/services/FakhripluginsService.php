@@ -49,4 +49,40 @@ class FakhripluginsService extends Component
 
         return $result;
     }
+
+    public function getCustomers(){
+      $customer = [
+        [
+          'name' => 'Dzulfikar Adiputra',
+          'email' => 'dzulfikar@gmail.com',
+          'totalPurchase' => 11,
+          'birthday' => '1998-12-24',
+        ],
+        [
+          'name' => 'Fakhri Alauddin',
+          'email' => 'fakhri@gmail.com',
+          'totalPurchase' => 12,
+          'birthday' => '2001-03-31',
+        ],
+        [
+          'name' => 'Rama Maulana',
+          'email' => 'rama@gmail.com',
+          'totalPurchase' => 13,
+          'birthday' => '2003-04-21',
+        ],
+        [
+          'name' => 'Renaldy Permana',
+          'email' => 'renaldy@gmail.com',
+          'totalPurchase' => 14,
+          'birthday' => '2003-05-11',
+        ],
+        [
+          'name' => 'Anonymouse',
+          'email' => 'Anonymouse@gmail.com',
+          'totalPurchase' => 15,
+          'birthday' => '2001-01-01',
+        ],
+      ];
+      return $customer;
+    }
 }

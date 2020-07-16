@@ -55,6 +55,7 @@ class FakhripluginsTwigExtension extends AbstractExtension
     {
         return [
             new TwigFilter('someFilter', [$this, 'someInternalFunction']),
+            new TwigFilter('dateFilter', [$this, 'dateFilter']),
         ];
     }
 
@@ -83,6 +84,26 @@ class FakhripluginsTwigExtension extends AbstractExtension
     {
         $result = $text . " in the way";
 
+        return $result;
+    }
+    public function dateFilter($date) {
+      $bulan = [
+        1 => 'Januari',
+        'Februari',
+        'Maret',
+        'April',
+        'Mei',
+        'Juni',
+        'Juli',
+        'Agustus',
+        'September',
+        'Oktober',
+        'November',
+        'Desember'
+      ];
+        $array = explode('-', $date);
+        $array[1] = date("m", mktime(0, 0, 0, $array[1], 10));
+        $result = $array[2].' '.$bulan[(int) $array[1]].' '.$array[0];
         return $result;
     }
 }

@@ -1,43 +1,42 @@
-{# @var craft \craft\web\twig\variables\CraftVariable #}
-{#
-/**
- * fakhri-plugins plugin for Craft CMS 3.x
- *
- * fakhri-plugins index.twig
- *
- * @author    Fakhri Alauddin
- * @copyright Copyright (c) 2020 Fakhri Alauddin
- * @link      https://github.com/fakhri17
- * @package   Fakhriplugins
- * @since     1.0.0
- */
-#}
+{% extends "fakhri-plugins/_layouts/base.twig" %}
 
-{% extends "_layouts/cp" %}
-{% import "_includes/forms" as forms %}
-
-{# Link for the ? icon at the bottom of the page #}
-{% set docsUrl = "https://github.com/fakhri17/fakhri-plugins/blob/master/README.md" %}
-
-{# The title of this CP section #}
-{% set title = "fakhri-plugins" %}
-
-{# The URL to this plugin's base CP section #}
-{% set pluginCpUrl = url('fakhri-plugins') %}
-
-{# Get a URL to an image in our AssetBundle #}
-{% set iconUrl = view.getAssetManager().getPublishedUrl('@fakhri/fakhriplugins/assetbundles/indexcpsection/dist', true) ~ '/img/Index-icon.svg' %}
-
+{% block content %}
+  {% set customer = craft.fakhriplugins.getCustomers() %}
+  <table class="table-auto">
+    <thead>
+      <tr>
+        <th class="px-4 py-2">Name</th>
+        <th class="px-4 py-2">Email</th>
+        <th class="px-4 py-2">Total Purchase</th>
+        <th class="px-4 py-2">Birthday</th>
+      </tr>
+    </thead>
+    <tbody>
+      {% for item in customer %}
+      <tr>
+        <td class="border px-4 py-2">{{item.name}}</td>
+        <td class="border px-4 py-2">{{item.email}}</td>
+        <td class="border px-4 py-2">{{item.totalPurchase}}</td>
+        <td class="border px-4 py-2">{{item.birthday|dateFilter}}</td>
+      </tr>
+      {% endfor %}
+    </tbody>
+  </table>
+{% endblock %}
 {# Content that should appear in the page header#}
-{% set extraPageHeaderHtml %}
+{# {% set extraPageHeaderHtml %}
     <div class="buttons">
         <a href="{{ pluginCpUrl }}" class="btn submit add icon">{{ "Click Me!"|t('fakhri-plugins') }}</a>
     </div>
-{% endset %}
+{% endset %} #}
 
 {# The content of the CP Section#}
-{% set content %}
+{# {% set content %}
     <h2>{{ "Index CP Section body goes here"|t('fakhri-plugins') }}</h2>
     <img src="{{ iconUrl }}" height="64" width="64" />
     <p class="textline"></p>
-{% endset %}
+{% endset %} #}
+
+
+
+
