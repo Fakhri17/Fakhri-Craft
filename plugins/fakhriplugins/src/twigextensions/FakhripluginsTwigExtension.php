@@ -56,6 +56,7 @@ class FakhripluginsTwigExtension extends AbstractExtension
         return [
             new TwigFilter('someFilter', [$this, 'someInternalFunction']),
             new TwigFilter('dateFilter', [$this, 'dateFilter']),
+            new TwigFilter('jsonDecode', [$this, 'jsonDeconde']),
         ];
     }
 
@@ -106,4 +107,8 @@ class FakhripluginsTwigExtension extends AbstractExtension
         $result = $array[2].' '.$bulan[(int) $array[1]].' '.$array[0];
         return $result;
     }
+
+    // public function jsonDecode($str) {
+    //     return json_decode($str);
+    // }
 }

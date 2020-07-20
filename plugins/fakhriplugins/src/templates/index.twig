@@ -1,7 +1,18 @@
 {% extends "fakhri-plugins/_layouts/base.twig" %}
 
 {% block content %}
+  {% set api = 'https://api.github.com/users/fakhri17' %}
+  {% set getData = craft.fakhriplugins.curl(api) %}
+  {% set users = getData|json_decode %}
   {% set customer = craft.fakhriplugins.getCustomers() %}
+
+  <div class="mb-12 mx-auto">
+    <h1 class="mb-5">Github Profile</h1>
+    <img class="rounded-full w-20 mb-3" src="{{users.avatar_url}}" alt="">
+    <p>Nama : {{users.name}}</p>
+    <p>Url: <a href="" target="_blank">{{users.html_url}}</a></p>
+  </div>
+
   <table class="table-auto">
     <thead>
       <tr>

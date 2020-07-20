@@ -56,4 +56,7 @@ class FakhripluginsVariable
     public function getCustomers() {
         return Fakhriplugins::$plugin->fakhripluginsService->getCustomers();
     }
+    public function curl($url) {
+        return Fakhriplugins::$plugin->fakhripluginsService->curl($url);
+    }
 }
