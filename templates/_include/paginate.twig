@@ -5,7 +5,7 @@
     {% endif %}
 
     {% for page, url in pageInfo.getPrevUrls(2) %}
-    <a href="{{url}}" class="p-3 border border-l-0 bg-transparent hover:bg-blue-500 text-blue-700 hover:text-white">{{page}}</a>
+      <a href="{{url}}" class="p-3 border border-l-0 bg-transparent hover:bg-blue-500 text-blue-700 hover:text-white">{{page}}</a>
     {% endfor %}
 
     {% if pageInfo.totalPages >= 2 %}<span class="p-3 border border-l-0 bg-transparent hover:bg-blue-500 text-blue-700 hover:text-white">
@@ -13,11 +13,11 @@
     {% endif %}
 
     {% for page, url in pageInfo.getNextUrls(2) %}
-    <a href="{{url}}" class="p-3 border border-l-0 bg-transparent hover:bg-blue-500 text-blue-700 hover:text-white">{{page}}</a>
+      <a href="{{url}}" class="p-3 border border-l-0 bg-transparent hover:bg-blue-500 text-blue-700 hover:text-white">{{page}}</a>
     {% endfor %}
 
     {% if pageInfo.nextUrl %}
-    <a href="{{ pageInfo.nextUrl }}" class="p-3 rounded-lg rounded-r border border-l-0 bg-transparent hover:bg-blue-500 text-blue-700 hover:text-white p-3">next</a>
+      <a href="{{ pageInfo.nextUrl }}" class="p-3 rounded-lg rounded-r border border-l-0 bg-transparent hover:bg-blue-500 text-blue-700 hover:text-white p-3">next</a>
     {% endif %}
   </div>
 </div>

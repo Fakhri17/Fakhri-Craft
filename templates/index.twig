@@ -1,14 +1,16 @@
 {% extends "_layouts/base.twig" %}
+
 {% block content %}
+{% set entry =  craft.entries()
+  .section('post')
+  .type('post')
+  .limit(4) 
+%}
 <div class="flex sm:flex-row flex-wrap sm:mt-10 ">
   <div class="w-full sm:w-3/4  sm:px-8 text-center"> 
     <div class=" uppercase  text-4xl font-bold" >
       <h1> Selamat  Datang Di Fakhri BlogTech </h1> 
     </div>
-  {% set entry =  craft.entries()
-    .section('post')
-    .type('post')
-    .limit(4) %}
     <div class="sm:flex content-start sm:flex-wrap mt-5 mb-10 mx-10">     
       {% paginate entry as pageInfo, pageEntries %}
       {% for item in pageEntries %}

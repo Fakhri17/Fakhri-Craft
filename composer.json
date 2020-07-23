@@ -1,6 +1,7 @@
 {
   "require": {
     "craftcms/cms": "3.4.19.1",
+    "craftcms/element-api": "2.6.0",
     "craftcms/redactor": "2.6.1",
     "fakhri/fakhri-plugins": "^1.0",
     "froala/craft-froala-wysiwyg": "2.9.5",

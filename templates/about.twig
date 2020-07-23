@@ -1,4 +1,5 @@
 {% extends "_layouts/base.twig" %}
+
 {% block content %}
 <div class="sm:container  px-5 ">
   <div class="sm:flex justify-center sm:flex-wrap mt-10">
@@ -9,11 +10,10 @@
     </div>
   </div>
   <section class="container mt-5 mx-auto">
-    <h1 class="text-center uppercase  text-4xl font-bold  ">About</h1>
+    <h1 class="text-center uppercase text-4xl font-bold  ">About</h1>
     <div class="text-center  font-serif   p-5  text-xl">
       {{entry.contentText}}
     </div>
   </section>
 </div>
-<a id="button"></a>
 {% endblock  %}

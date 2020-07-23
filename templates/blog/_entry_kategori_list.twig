@@ -1,26 +1,27 @@
 {% extends "_layouts/base.twig" %}
 
 {% block content %}
-<div class="flex sm:flex-row flex-wrap sm:mt-10 ">
-  <div class="w-full sm:w-3/4  sm:px-8 text-center">
-    <div class=" uppercase  text-4xl font-bold">
-      <h1> Selamat  Datang Di Fakhri BlogTech  </h1>
-    </div>
+  {% set category = craft.categories.slug(category.slug) %}
+  {% set entry = craft.entries()
+    .section('post')
+    .type('post')
+    .relatedTo(category)
+    .limit(4) 
+  %}
+  <div class="flex sm:flex-row flex-wrap sm:mt-10 ">
+    <div class="w-full sm:w-3/4  sm:px-8 text-center">
+      <div class=" uppercase  text-4xl font-bold">
+        <h1> Selamat  Datang Di Fakhri BlogTech  </h1>
+      </div>
       <p> Menampilkan : {{category.title}}</p> 
-    <div class="md:flex content-start md:flex-wrap mt-5 mb-10 mx-10">
-      {% set category = craft.categories.slug(category.slug) %}
-      {% set entry = craft.entries()
-        .section('post')
-        .type('post').
-        relatedTo(category)
-        .limit(4) %}
+      <div class="md:flex content-start md:flex-wrap mt-5 mb-10 mx-10">
       {% paginate entry as pageInfo, pageEntries %}
       {% for item in pageEntries %}
         {% include "_include/blog_list.twig" %}
       {% endfor %}
+      </div>
+      {% include "_include/paginate.twig" %}
     </div>
-    {% include "_include/paginate.twig" %}
+    {% include "_include/sidebar.twig" %}
   </div>
-  {% include "_include/sidebar.twig" %}
-</div>
 {% endblock %}
